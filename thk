@@ -1,0 +1,134 @@
+df <- read.csv('product_quality.csv')
+#head(df)
+w1 = subset(df,Work_No.=="No.01")
+w2 = subset(df,Work_No.=="No.02")
+w3 = subset(df,Work_No.=="No.03")
+w4 = subset(df,Work_No.=="No.04")
+w5 = subset(df,Work_No.=="No.05")
+w6 = subset(df,Work_No.=="No.06")
+w7 = subset(df,Work_No.=="No.07")
+w8 = subset(df,Work_No.=="No.08")
+w9 = subset(df,Work_No.=="No.09")
+w10 = subset(df,Work_No.=="No.10")
+w11 = subset(df,Work_No.=="No.11")
+w12 = subset(df,Work_No.=="No.12")
+w13 = subset(df,Work_No.=="No.13")
+w14 = subset(df,Work_No.=="No.14")
+w15 = subset(df,Work_No.=="No.15")
+w16 = subset(df,Work_No.=="No.16")
+w17 = subset(df,Work_No.=="No.17")
+w18 = subset(df,Work_No.=="No.18")
+w19 = subset(df,Work_No.=="No.19")
+#head(w1)
+w1m<-w1[,4:14]
+w2m<-w2[,4:14]
+w3m<-w3[,4:14]
+w4m<-w4[,4:14]
+w5m<-w5[,4:14]
+w6m<-w6[,4:14]
+w7m<-w7[,4:14]
+w8m<-w8[,4:14]
+w9m<-w9[,4:14]
+w10m<-w10[,4:14]
+w11m<-w11[,4:14]
+w12m<-w12[,4:14]
+w13m<-w13[,4:14]
+w14m<-w14[,4:14]
+w15m<-w15[,4:14]
+w16m<-w16[,4:14]
+w17m<-w17[,4:14]
+w18m<-w18[,4:14]
+w19m<-w19[,4:14]
+#平均ベクトル
+m.w1m<-colMeans(w1m)
+#それぞれの分散共分散行列
+v.w1m<- var(w1m)
+#マハラノビス距離の計算
+w1m.maha<-mahalanobis(w1m,m.w1m,v.w1m)
+#hist描画
+hist(w1m.maha)
+#history(100)
+
+###rep.平均ベクトル###
+m.w2m<-colMeans(w2m)
+m.w3m<-colMeans(w3m)
+m.w4m<-colMeans(w4m)
+m.w5m<-colMeans(w5m)
+m.w6m<-colMeans(w6m)
+m.w7m<-colMeans(w7m)
+m.w8m<-colMeans(w8m)
+m.w9m<-colMeans(w9m)
+m.w10m<-colMeans(w10m)
+m.w11m<-colMeans(w11m)
+m.w12m<-colMeans(w12m)
+m.w13m<-colMeans(w13m)
+m.w14m<-colMeans(w14m)
+m.w15m<-colMeans(w15m)
+m.w16m<-colMeans(w16m)
+m.w17m<-colMeans(w17m)
+m.w18m<-colMeans(w18m)
+m.w19m<-colMeans(w19m)
+
+###rep.それぞれの分散共分散行列###
+v.w2m<- var(w2m)
+v.w3m<- var(w3m)
+v.w4m<- var(w4m)
+v.w5m<- var(w5m)
+v.w6m<- var(w6m)
+v.w7m<- var(w7m)
+v.w8m<- var(w8m)
+v.w9m<- var(w9m)
+v.w10m<- var(w10m)
+v.w11m<- var(w11m)
+v.w12m<- var(w12m)
+v.w13m<- var(w13m)
+v.w14m<- var(w14m)
+v.w15m<- var(w15m)
+v.w16m<- var(w16m)
+v.w17m<- var(w17m)
+v.w18m<- var(w18m)
+v.w19m<- var(w19m)
+
+###rep.マハラノビス距離###
+w2m.maha<-mahalanobis(w2m,m.w2m,v.w2m)
+w3m.maha<-mahalanobis(w3m,m.w3m,v.w3m)
+w4m.maha<-mahalanobis(w4m,m.w4m,v.w4m)
+w5m.maha<-mahalanobis(w5m,m.w5m,v.w5m)
+w6m.maha<-mahalanobis(w6m,m.w6m,v.w6m)
+w7m.maha<-mahalanobis(w7m,m.w7m,v.w7m)
+w8m.maha<-mahalanobis(w8m,m.w8m,v.w8m)
+w9m.maha<-mahalanobis(w9m,m.w9m,v.w9m)
+w10m.maha<-mahalanobis(w10m,m.w10m,v.w10m)
+w11m.maha<-mahalanobis(w11m,m.w11m,v.w11m)
+w12m.maha<-mahalanobis(w12m,m.w12m,v.w12m)
+w13m.maha<-mahalanobis(w13m,m.w13m,v.w13m)
+w14m.maha<-mahalanobis(w14m,m.w14m,v.w14m)
+w15m.maha<-mahalanobis(w15m,m.w15m,v.w15m)
+w16m.maha<-mahalanobis(w16m,m.w16m,v.w16m)
+w17m.maha<-mahalanobis(w17m,m.w17m,v.w17m)
+w18m.maha<-mahalanobis(w18m,m.w18m,v.w18m)
+w19m.maha<-mahalanobis(w19m,m.w19m,v.w19m)
+
+#グラフィックデバイスに4x5の画像をサイズの宣言を行う
+par(mfrow=c(4,5))
+
+#workの1~19までを順番に描画する
+hist(w1m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w2m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w3m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w4m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w5m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w6m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w7m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w8m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w9m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w10m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w11m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w12m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w13m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w14m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w15m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w16m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w17m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w18m.maha, xlim=c(0,200), ylim=c(0,500))
+hist(w19m.maha, xlim=c(0,200), ylim=c(0,500))
